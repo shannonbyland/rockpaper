@@ -1,20 +1,46 @@
 <!DOCTYPE html>
+<html>
 <head>
-
+  <title>Rock, Paper, Scissors!</title>
+  <meta charset = "UTF-8" />
+  <link href="styles.css" rel="stylesheet" />
+  <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css"
+      rel="stylesheet">
 </head>
 
 <body>
-  <button id="rock">Rock</button>
-  <button id="paper">Paper</button>
-  <button id="scissors">Scissors</button>
 
-  <div class="col m4 cyan lighten-4" id='thing'></div>
-  <div class="col m4 pink" id="usertally"></div>
-  <div class="col m4 green" id="comptally"></div>
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">
+      <h1>User Score</h1>
+    </div>
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
+      <h1>Computer Score</h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-4" id="usertally">0</div>
+    <div class="col-md-4" height="auto">
+      <button id="rock">Rock</button>
+      <br />
+      <button id="paper">Paper</button>
+      <button id="scissors">Scissors</button>
+      <button id="clearme">Reset</button>
+      <div  id='thing'>
+      </div>
+    </div>
+    <div class="col-md-4" id="comptally">0</div>
+  </div>
+</div>
 
-<script
- src="https://code.jquery.com/jquery-3.2.1.min.js"
- integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
- crossorigin="anonymous"></script>
- <script src="main.js"></script>
+
+  <script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+  <script src="main.js"></script>
 </body>
+
+</html>

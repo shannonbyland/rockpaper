@@ -1,14 +1,14 @@
-$('#rock').click( function() {
+$('#rock').on('click', function() {
   var result = compare('rock', compAnswer());
   $('#thing').html(result);
 });
 
-$('#paper').click(function() {
+$('#paper').on('click', function() {
   var result = compare('paper', compAnswer());
   $('#thing').html(result);
 });
 
-$('#scissors').click( function() {
+$('#scissors').on('click', function() {
   var result = compare('scissors', compAnswer());
   $('#thing').html(result);
 });
@@ -16,7 +16,6 @@ $('#scissors').click( function() {
 
   var compAnswer = function () {
     var random = Math.floor(Math.random() * 3) + 1;
-    console.log(random)
     if (random === 1) {
           return "rock"
         } else if (random === 2) {
@@ -29,36 +28,57 @@ $('#scissors').click( function() {
   var compare = function (user, computer) {
     if (user === "rock") {
         if (computer === "rock") {
-          return "This is a Tie"
+          return "It's a Tie"
 
             } else if (computer === "paper") {
-              return "Paper cover rock, Computer Wins!"
-
+              compWin();
+              return "Paper covers rock, Computer Wins!"
             } else if (computer === "scissors") {
+              userWin();
               return "Rock Crushes Scissors!"
-            }  // this is the end of paper condidition
+            }  //This is the end of the user == rock condition
 
-        } else if (user === "paper") {
-                   if (computer === "paper")
-                     return "THis is a tie"
-             } else if ( computer === "rock") {
-               return "Paper covers rock, User wins!"
-
-             } else if (computer === "scissors") {
-               return "Scissors slice paper, computer wins."
-             }
+        } else if (user == "paper") {
+      if (computer == "paper") {
+        return "It's a tie"
+      } else if (computer == "rock") {
+        userWin();
+        return "Paper covers rock, You Win!"
+      } else if (computer == "scissors") {
+        compWin();
+        return "Scissors slice paper, Computer Wins!"
+      }
+    } //This is the end of the user == paper condition
           else if (user === "scissors") {
                if (computer === "scissors") {
-                   return "IT's a tie!"
+                   return "It's a tie!"
 
                    } else if (computer === "rock") {
-                     return "Rock crushes, computer wins"
+                     compWin();
+                     return "Rock crushes, Computer Wins"
 
                    } else if (computer === "paper") {
-                   return "scissors cuts paper, user wins!"
+                     userWin();
+                   return "Scissors cut paper, User Wins!"
 
           } else {
            return "YOU BROKE IT"
           }
        }
   }
+
+function userWin () {
+  var userScore = $('#usertally');
+  var newPlayerScore = parseInt(userScore.text()) + 1;
+  userScore.text(newPlayerScore);
+}
+
+function compWin () {
+  var compScore = $('#comptally');
+  var newCompScore = parseInt(compScore.text()) + 1;
+  compScore.text(newCompScore)
+}
+
+$('#clearme').on('click', function () {
+  $('#thing').html(" ");
+});

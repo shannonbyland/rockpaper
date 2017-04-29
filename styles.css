@@ -1,0 +1,35 @@
+.container {
+  margin: 50px auto 50px auto;
+  text-align: center;
+  background: rgba(140, 171, 206, 0.5);
+  height: auto;
+  font-size: 40px;
+}
+
+#rock {
+  margin: 15px;
+  background-image: url(pics/rock.jpg);
+  background-repeat: no-repeat;
+  width: 160px;
+  height: 100px;
+}
+
+#paper {
+  margin: 15px;
+  background-image: url(pics/paper.png);
+  background-repeat: no-repeat;
+  width: 160px;
+  height: 100px;
+}
+
+#scissors {
+  margin: 15px;
+  background-image: url(pics/scissors.jpg);
+  width: 160px;
+  height: 100px;
+}
+
+#clearme {
+  width: 160px;
+  height: 100px;
+}
