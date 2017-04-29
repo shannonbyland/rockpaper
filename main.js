@@ -38,13 +38,13 @@ $('#scissors').on('click', function() {
               return "Rock Crushes Scissors!"
             }  //This is the end of the user == rock condition
 
-        } else if (user == "paper") {
-      if (computer == "paper") {
+        } else if (user === "paper") {
+      if (computer === "paper") {
         return "It's a tie"
-      } else if (computer == "rock") {
+      } else if (computer === "rock") {
         userWin();
         return "Paper covers rock, You Win!"
-      } else if (computer == "scissors") {
+      } else if (computer === "scissors") {
         compWin();
         return "Scissors slice paper, Computer Wins!"
       }

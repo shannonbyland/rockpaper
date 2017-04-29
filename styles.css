@@ -8,23 +8,30 @@
 
 #rock {
   margin: 15px;
-  background-image: url(pics/rock.jpg);
+  background-image: url("https://cdn3.iconfinder.com/data/icons/interaction-design/512/Hand_D-512.png");
   background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
   width: 160px;
   height: 100px;
 }
 
 #paper {
   margin: 15px;
-  background-image: url(pics/paper.png);
+  background-image: url("https://cdn3.iconfinder.com/data/icons/ui-10/512/paper_roll-512.png");
   background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
   width: 160px;
   height: 100px;
 }
 
 #scissors {
   margin: 15px;
-  background-image: url(pics/scissors.jpg);
+  background-image: url("http://www.iconarchive.com/download/i90819/icons8/windows-8/Hair-Barbers-Scissors.ico");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
   width: 160px;
   height: 100px;
 }
