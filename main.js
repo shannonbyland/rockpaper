@@ -1,6 +1,8 @@
+
 $('#rock').on('click', function() {
   var result = compare('rock', compAnswer());
   $('#thing').html(result);
+  
 });
 
 $('#paper').on('click', function() {
